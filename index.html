@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+<body class="flex bg-body">
+  <div class="container flex ff-open-sans fw-400 fs-180 text-color">
+    <header class="text-white bg-red flex">
+      <div class="balance flex">
+        <p>My balance</p>
+        <h3 class="fw-600">$921.48</h3>
+      </div>
+      <img src="images/logo.svg" alt="">
+    </header>
+    <div class="preview bg-white">
+      <h3 class="text-dark fw-600">Spending - Last 7 days</h3>
+      <div class="blocks flex">
+        <div class="bar flex">
+          <div class="block block-one bg-red"></div>
+          <p class="text-small">mon</p>
+        </div>
+        <div class="bar flex">
+          <div class="block block-two bg-red"></div>
+          <p class="text-small">tue</p>
+        </div>
+        <div class="bar flex">
+          <div class="bar-black bar-one hidden">$52.36</div>
+          <div class="block block-three bg-cyan"></div>
+          <p class="text-small">wed</p>
+        </div>
+        <div class="bar flex">
+          <div class="bar-black bar-two hidden">$31.07</div>
+          <div class="block block-four bg-red"></div>
+          <p class="text-small">thur</p>
+        </div>
+        <div class="bar flex">
+          <div class="block block-five bg-red"></div>
+          <p class="text-small">fri</p>
+        </div>
+        <div class="bar flex">
+          <div class="block block-six bg-red"></div>
+          <p class="text-small">sat</p>
+        </div>
+        <div class="bar flex">
+          <div class="block block-seven bg-red"></div>
+          <p class="text-small">sun</p>
+        </div>
+      </div>
+
+      <div class="results flex">
+        <div class="total flex">
+          <p class="text-small fw-400">Total this month</p>
+          <h1 class="fw-600">$478.33</h1>
+        </div>
+        <div class="percent flex">
+          <h5 class="text-dark fw-600">+2.4%</h5>
+          <p class="text-small fw-400">from last month</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const btnOne = document.querySelector(".block-three");
+  const btnTwo = document.querySelector(".block-four");
+  const barOne = document.querySelector(".bar-one");
+  const barTwo = document.querySelector(".bar-two");
+
+  btnOne.addEventListener("click", () => {
+    barOne.classList.toggle("hidden");
+  });
+  btnTwo.addEventListener("click", () => {
+    barTwo.classList.toggle("hidden");
+  });
+
+</script>
+</body>
+</html>
